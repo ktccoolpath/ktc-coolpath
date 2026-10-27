@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoolPath – Heat Alert Test</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 14px; }
+    .heat-level { font-size: 1.3rem; font-weight: 700; }
+    .heat-numbers { margin: 4px 0 8px; color: var(--muted); }
+    .heat-advice { margin-top: 4px; }
+    .heat-source { margin-top: 8px; font-size: .75rem; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    th, td { text-align: left; padding: 6px; border-bottom: 1px solid var(--border); }
+    .pass { color: #17663f; font-weight: 700; }
+    .fail { color: #c62828; font-weight: 700; }
+    h2 { font-size: 1.05rem; margin: 0 0 10px; }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="logo">🌡</span>
+    <div><h1>Heat alert – test page</h1><p class="subtitle">Week 2 prototype of the heat alert logic</p></div></div>
+  </header>
+  <main>
+    <section class="card">
+      <h2>1. Live weather for the campus (Open-Meteo)</h2>
+      <div id="heat-alert" class="card" style="margin:0">Loading weather…</div>
+    </section>
+
+    <section class="card">
+      <h2>2. Logic tests (fixed values, no internet needed)</h2>
+      <table>
+        <thead><tr><th>Feels like</th><th>UV</th><th>Expected</th><th>Got</th><th>Result</th></tr></thead>
+        <tbody id="tests"></tbody>
+      </table>
+      <p id="summary"></p>
+    </section>
+
+    <section class="card">
+      <h2>3. Try your own value</h2>
+      <label>Feels-like °C <input id="try-temp" type="number" value="45" style="width:80px"></label>
+      <label style="margin-left:10px">UV <input id="try-uv" type="number" value="9" style="width:60px"></label>
+      <div id="try-out" class="card" style="margin:10px 0 0"></div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/heat.js"></script>
+  <script>
+    const H = window.CoolPathHeat;
+    const loc = window.COOLPATH_CONFIG.campusLocation;
+
+    // 1. Live weather
+    const box = document.getElementById("heat-alert");
+    H.fetchWeather(loc.lat, loc.lng)
+      .then(w => H.render(box, w))
+      .catch(err => { console.error(err); H.renderOffline(box); });
+
+    // 2. Automatic tests
+    const cases = [
+      [20, 3, "Normal"], [26.9, 5, "Normal"], [27, 5, "Caution"], [31.9, 6, "Caution"],
+      [32, 7, "Extreme caution"], [40, 9, "Extreme caution"], [41, 10, "Danger"],
+      [50, 11, "Danger"], [54, 11, "Extreme danger"], [60, 12, "Extreme danger"]
+    ];
+    let passed = 0;
+    const tbody = document.getElementById("tests");
+    cases.forEach(([t, uv, expected]) => {
+      const got = H.classify(t, uv).label;
+      const ok = got === expected;
+      if (ok) passed++;
+      tbody.insertAdjacentHTML("beforeend",
+        `<tr><td>${t}°C</td><td>${uv}</td><td>${expected}</td><td>${got}</td>
+         <td class="${ok ? "pass" : "fail"}">${ok ? "PASS" : "FAIL"}</td></tr>`);
+    });
+    document.getElementById("summary").textContent = `${passed} / ${cases.length} tests passed`;
+
+    // 3. Manual try
+    function tryIt() {
+      const t = Number(document.getElementById("try-temp").value);
+      const uv = Number(document.getElementById("try-uv").value);
+      H.render(document.getElementById("try-out"),
+        { temperature: t, feelsLike: t, humidity: 0, uv, time: "manual test" });
+    }
+    document.getElementById("try-temp").addEventListener("input", tryIt);
+    document.getElementById("try-uv").addEventListener("input", tryIt);
+    tryIt();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1918 @@
+{
+ "type": "FeatureCollection",
+ "name": "KTC CoolPath campus data",
+ "crs_note": "Coordinates are [x, y] in PIXELS on the floor image (688 x 445). x from left, y from top. See docs/data-format.md",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     337,
+     408
+    ]
+   },
+   "properties": {
+    "id": "G1",
+    "name": "Gate 1 (main entrance)",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     544,
+     396
+    ]
+   },
+   "properties": {
+    "id": "G2",
+    "name": "Gate 2",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     616,
+     213
+    ]
+   },
+   "properties": {
+    "id": "G3",
+    "name": "Gate 3",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     507,
+     34
+    ]
+   },
+   "properties": {
+    "id": "G4",
+    "name": "Gate 4",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     332,
+     34
+    ]
+   },
+   "properties": {
+    "id": "G5",
+    "name": "Gate 5",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     180,
+     34
+    ]
+   },
+   "properties": {
+    "id": "G6",
+    "name": "Gate 6",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     60,
+     213
+    ]
+   },
+   "properties": {
+    "id": "G7",
+    "name": "Gate 7",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118,
+     396
+    ]
+   },
+   "properties": {
+    "id": "G8",
+    "name": "Gate 8",
+    "type": "gate",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Exit to outdoors - record shade outside this gate"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     338,
+     75
+    ]
+   },
+   "properties": {
+    "id": "F-FOOD",
+    "name": "Food Hall",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     518,
+     96
+    ]
+   },
+   "properties": {
+    "id": "F-TRAIN",
+    "name": "Training Center",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     173,
+     180
+    ]
+   },
+   "properties": {
+    "id": "F-GAME",
+    "name": "Gaming Room",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     227,
+     177
+    ]
+   },
+   "properties": {
+    "id": "F-ADM",
+    "name": "Admission",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     338,
+     155
+    ]
+   },
+   "properties": {
+    "id": "F-AUD",
+    "name": "Auditorium",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     477,
+     192
+    ]
+   },
+   "properties": {
+    "id": "F-SLIFE",
+    "name": "Student Life",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     531,
+     177
+    ]
+   },
+   "properties": {
+    "id": "F-REG",
+    "name": "Registration",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     439,
+     200
+    ]
+   },
+   "properties": {
+    "id": "F-GIFT",
+    "name": "Gift Shop",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     135,
+     287
+    ]
+   },
+   "properties": {
+    "id": "F-ESP",
+    "name": "E-Sports",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     209,
+     288
+    ]
+   },
+   "properties": {
+    "id": "F-CAFE",
+    "name": "Cafes & Stores",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     431,
+     285
+    ]
+   },
+   "properties": {
+    "id": "F-TAL",
+    "name": "Talent Space",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     493,
+     290
+    ]
+   },
+   "properties": {
+    "id": "F-COFFEE",
+    "name": "Coffee Shops & Restaurants",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     251,
+     348
+    ]
+   },
+   "properties": {
+    "id": "F-VIP",
+    "name": "VIP Lounge",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     337,
+     332
+    ]
+   },
+   "properties": {
+    "id": "F-LOBBY",
+    "name": "Main Lobby",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     430,
+     345
+    ]
+   },
+   "properties": {
+    "id": "F-CLINIC",
+    "name": "Clinic",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     489,
+     347
+    ]
+   },
+   "properties": {
+    "id": "F-SS",
+    "name": "Student Services",
+    "type": "facility",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     268,
+     162
+    ]
+   },
+   "properties": {
+    "id": "R-WEST",
+    "name": "Restroom & Prayer Room (west)",
+    "type": "restroom",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     407,
+     162
+    ]
+   },
+   "properties": {
+    "id": "R-EAST",
+    "name": "Restroom & Prayer Room (east)",
+    "type": "restroom",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     337,
+     262
+    ]
+   },
+   "properties": {
+    "id": "E1",
+    "name": "Elevator 1 (central)",
+    "type": "elevator",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     120,
+     110
+    ]
+   },
+   "properties": {
+    "id": "E2",
+    "name": "Elevator 2",
+    "type": "elevator",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     563,
+     110
+    ]
+   },
+   "properties": {
+    "id": "E3",
+    "name": "Elevator 3",
+    "type": "elevator",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100,
+     269
+    ]
+   },
+   "properties": {
+    "id": "E4",
+    "name": "Elevator 4",
+    "type": "elevator",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     563,
+     279
+    ]
+   },
+   "properties": {
+    "id": "E5",
+    "name": "Elevator 5",
+    "type": "elevator",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     280,
+     275
+    ]
+   },
+   "properties": {
+    "id": "S-WEST",
+    "name": "Stairs (west of lobby)",
+    "type": "stairs",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     412,
+     275
+    ]
+   },
+   "properties": {
+    "id": "S-EAST",
+    "name": "Stairs (east of lobby)",
+    "type": "stairs",
+    "floor": 0,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     268,
+     180
+    ]
+   },
+   "properties": {
+    "id": "W1",
+    "name": "Water point – near west restroom",
+    "type": "water",
+    "floor": 0,
+    "verified": false,
+    "source": "assumed from floor map",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Assumed from the floor map (next to restroom / food area). Not visited yet."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     407,
+     180
+    ]
+   },
+   "properties": {
+    "id": "W2",
+    "name": "Water point – near east restroom",
+    "type": "water",
+    "floor": 0,
+    "verified": false,
+    "source": "assumed from floor map",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Assumed from the floor map (next to restroom / food area). Not visited yet."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     315,
+     94
+    ]
+   },
+   "properties": {
+    "id": "W3",
+    "name": "Water point – Food Hall",
+    "type": "water",
+    "floor": 0,
+    "verified": false,
+    "source": "assumed from floor map",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Assumed from the floor map (next to restroom / food area). Not visited yet."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     493,
+     304
+    ]
+   },
+   "properties": {
+    "id": "W4",
+    "name": "Water point – Coffee Shops",
+    "type": "water",
+    "floor": 0,
+    "verified": false,
+    "source": "assumed from floor map",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Assumed from the floor map (next to restroom / food area). Not visited yet."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     151,
+     65
+    ]
+   },
+   "properties": {
+    "id": "R219",
+    "name": "Room 219",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     190,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R221",
+    "name": "Room 221",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     233,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R223",
+    "name": "Room 223",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     274,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R225",
+    "name": "Room 225",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     312,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R227",
+    "name": "Room 227",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     356,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R280",
+    "name": "Room 280",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     406,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R272",
+    "name": "Room 272",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     460,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R270",
+    "name": "Room 270",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     507,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R269",
+    "name": "Room 269",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     537,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R267",
+    "name": "Room 267",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     567,
+     64
+    ]
+   },
+   "properties": {
+    "id": "R281",
+    "name": "Room 281",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     176,
+     124
+    ]
+   },
+   "properties": {
+    "id": "R220",
+    "name": "Room 220",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     234,
+     123
+    ]
+   },
+   "properties": {
+    "id": "R222",
+    "name": "Room 222",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     471,
+     124
+    ]
+   },
+   "properties": {
+    "id": "R268",
+    "name": "Room 268",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     531,
+     124
+    ]
+   },
+   "properties": {
+    "id": "R266",
+    "name": "Room 266",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     100,
+     179
+    ]
+   },
+   "properties": {
+    "id": "R210",
+    "name": "Room 210",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     156,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R211",
+    "name": "Room 211",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     198,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R212",
+    "name": "Room 212",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     247,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R213",
+    "name": "Room 213",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     429,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R265",
+    "name": "Room 265",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     495,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R264",
+    "name": "Room 264",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     558,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R263",
+    "name": "Room 263",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     610,
+     185
+    ]
+   },
+   "properties": {
+    "id": "R262",
+    "name": "Room 262",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     129,
+     263
+    ]
+   },
+   "properties": {
+    "id": "R207",
+    "name": "Room 207",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     172,
+     263
+    ]
+   },
+   "properties": {
+    "id": "R205",
+    "name": "Room 205",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     211,
+     263
+    ]
+   },
+   "properties": {
+    "id": "R203",
+    "name": "Room 203",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     473,
+     264
+    ]
+   },
+   "properties": {
+    "id": "R255",
+    "name": "Room 255",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     515,
+     264
+    ]
+   },
+   "properties": {
+    "id": "R257",
+    "name": "Room 257",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     566,
+     264
+    ]
+   },
+   "properties": {
+    "id": "R259",
+    "name": "Room 259",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     85,
+     324
+    ]
+   },
+   "properties": {
+    "id": "R208",
+    "name": "Room 208",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     135,
+     332
+    ]
+   },
+   "properties": {
+    "id": "R206",
+    "name": "Room 206",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     178,
+     332
+    ]
+   },
+   "properties": {
+    "id": "R204",
+    "name": "Room 204",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     218,
+     332
+    ]
+   },
+   "properties": {
+    "id": "R202",
+    "name": "Room 202",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     468,
+     330
+    ]
+   },
+   "properties": {
+    "id": "R254",
+    "name": "Room 254",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     513,
+     330
+    ]
+   },
+   "properties": {
+    "id": "R256",
+    "name": "Room 256",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     561,
+     330
+    ]
+   },
+   "properties": {
+    "id": "R258",
+    "name": "Room 258",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     615,
+     330
+    ]
+   },
+   "properties": {
+    "id": "R260",
+    "name": "Room 260",
+    "type": "room",
+    "floor": 1,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     526,
+     80
+    ]
+   },
+   "properties": {
+    "id": "R386",
+    "name": "Room 386",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     551,
+     80
+    ]
+   },
+   "properties": {
+    "id": "R385",
+    "name": "Room 385",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     216,
+     121
+    ]
+   },
+   "properties": {
+    "id": "R325",
+    "name": "Room 325",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     462,
+     122
+    ]
+   },
+   "properties": {
+    "id": "R378",
+    "name": "Room 378",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     500,
+     122
+    ]
+   },
+   "properties": {
+    "id": "R379",
+    "name": "Room 379",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     536,
+     122
+    ]
+   },
+   "properties": {
+    "id": "R380",
+    "name": "Room 380",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     153,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R321",
+    "name": "Room 321",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     200,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R322",
+    "name": "Room 322",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     230,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R323",
+    "name": "Room 323",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     263,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R329",
+    "name": "Room 329",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     426,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R374",
+    "name": "Room 374",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     465,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R373",
+    "name": "Room 373",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     503,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R372",
+    "name": "Room 372",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     538,
+     174
+    ]
+   },
+   "properties": {
+    "id": "R371",
+    "name": "Room 371",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     83,
+     220
+    ]
+   },
+   "properties": {
+    "id": "R320",
+    "name": "Room 320",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     597,
+     222
+    ]
+   },
+   "properties": {
+    "id": "R370",
+    "name": "Room 370",
+    "type": "room",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     342,
+     152
+    ]
+   },
+   "properties": {
+    "id": "F-2CENTRAL",
+    "name": "Central study area (yellow) - name to confirm",
+    "type": "facility",
+    "floor": 2,
+    "verified": true,
+    "source": "KTC floor map (provided by supervisor)",
+    "checked_by": "",
+    "checked_date": "",
+    "notes": "Ask staff for the official name"
+   }
+  }
+ ]
+}

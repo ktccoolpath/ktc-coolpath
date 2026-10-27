@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoolPath – Wireframes</title>
+  <style>
+    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background:#eef0f4; color:#222; }
+    header { padding:18px 20px 6px; }
+    header h1 { margin:0; font-size:1.3rem; }
+    header p { margin:4px 0 0; color:#666; font-size:.9rem; }
+    .row { display:flex; flex-wrap:wrap; gap:22px; padding:18px 20px 40px; }
+    .screen { width:250px; }
+    .screen h2 { font-size:.9rem; margin:0 0 6px; }
+    .screen .desc { font-size:.78rem; color:#666; margin:6px 0 0; }
+    .phone { width:250px; height:500px; background:#fff; border:3px solid #333; border-radius:28px; padding:16px 12px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px; overflow:hidden; }
+    .bar { height:28px; background:#555; border-radius:6px; color:#fff; font-size:.75rem; display:flex; align-items:center; padding:0 8px; }
+    .box { border:2px solid #999; border-radius:8px; padding:8px; font-size:.75rem; color:#444; }
+    .fill { background:#e4e4e4; }
+    .alert { border-left:6px solid #888; }
+    .btn { background:#333; color:#fff; border-radius:8px; text-align:center; padding:8px; font-size:.75rem; }
+    .btn.ghost { background:#fff; color:#333; border:2px solid #333; }
+    .map { flex:1; background: repeating-linear-gradient(45deg,#ececec,#ececec 8px,#f7f7f7 8px,#f7f7f7 16px); border:2px solid #999; border-radius:8px; position:relative; font-size:.7rem; color:#777; display:flex; align-items:center; justify-content:center; }
+    .tabs { display:flex; gap:4px; } .tabs span { flex:1; text-align:center; border:2px solid #999; border-radius:6px; font-size:.7rem; padding:4px 0; }
+    .tabs span.on { background:#555; color:#fff; border-color:#555; }
+    .line { height:8px; background:#d0d0d0; border-radius:4px; margin:4px 0; }
+    .line.s { width:60%; }
+    .note { position:absolute; bottom:6px; left:6px; right:6px; background:#fff; border:1px dashed #999; padding:4px; border-radius:6px; }
+    svg { position:absolute; inset:0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KTC CoolPath – low-fidelity wireframes (v1)</h1>
+    <p>Group 104 · Week 2 · Main screens of the mobile website. Grey boxes = content, dark buttons = main actions.</p>
+  </header>
+
+  <div class="row">
+    <!-- 1 -->
+    <div class="screen">
+      <h2>1. Home (opened from QR code)</h2>
+      <div class="phone">
+        <div class="bar">❄ KTC CoolPath</div>
+        <div class="box alert fill"><strong>Heat alert: Danger</strong><br>Feels like 47°C · UV 10<br>Use indoor / shaded route</div>
+        <div class="box">📍 You are at: <strong>Gate 1</strong><br><small>(filled in from the QR code)</small></div>
+        <div class="box">Where do you want to go?<div class="line"></div></div>
+        <div class="btn">Show routes</div>
+        <div class="box fill">Quick: Food Hall · Clinic · Registration</div>
+        <div class="btn ghost">Open full campus map</div>
+      </div>
+      <p class="desc">Each QR sign holds its own start point, so the student only picks a destination.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="screen">
+      <h2>2. Choose destination</h2>
+      <div class="phone">
+        <div class="bar">← Choose destination</div>
+        <div class="box">🔍 Search room or place<div class="line"></div></div>
+        <div class="tabs"><span class="on">Ground</span><span>1st</span><span>2nd</span></div>
+        <div class="box">Room 264 · 1st floor</div>
+        <div class="box">Room 213 · 1st floor</div>
+        <div class="box">Clinic · Ground</div>
+        <div class="box">Food Hall · Ground</div>
+        <div class="box">Room 325 · 2nd floor</div>
+      </div>
+      <p class="desc">Search by room number or name; list filtered by floor.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="screen">
+      <h2>3. Compare routes</h2>
+      <div class="phone">
+        <div class="bar">← Gate 1 → Room 264</div>
+        <div class="box alert fill"><strong>Danger</strong> – we recommend the Cool route</div>
+        <div class="box"><strong>⚡ Shortest route</strong><br>180 m · ~3 min<br>Shade: 20% · Water points: 0<div class="btn ghost" style="margin-top:6px">View on map</div></div>
+        <div class="box" style="border-color:#333;border-width:3px"><strong>❄ Cool route (recommended)</strong><br>230 m · ~4 min<br>Shade/indoor: 85% · Water points: 2<div class="btn" style="margin-top:6px">View on map</div></div>
+        <p style="font-size:.65rem;color:#777;margin:0">Planning guide only, not a safety guarantee.</p>
+      </div>
+      <p class="desc">Core idea of the project: short vs. shaded route side by side.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="screen">
+      <h2>4. Route on the map</h2>
+      <div class="phone">
+        <div class="bar">← Cool route</div>
+        <div class="tabs"><span class="on">Ground</span><span>1st</span><span>2nd</span></div>
+        <div class="map">
+          <svg viewBox="0 0 220 300" preserveAspectRatio="none"><polyline points="110,280 110,200 60,200 60,120 150,120" fill="none" stroke="#333" stroke-width="5" stroke-dasharray="2 0"/><circle cx="110" cy="280" r="8" fill="#333"/><circle cx="150" cy="120" r="8" fill="#fff" stroke="#333" stroke-width="3"/><text x="66" y="160" font-size="14">💧</text></svg>
+          <div class="note">Step 2/4: take the lift to the 1st floor</div>
+        </div>
+        <div class="btn ghost">Report a blocked path</div>
+      </div>
+      <p class="desc">Floor plan with the route line, water points and step-by-step text.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="screen">
+      <h2>5. Report a blocked path</h2>
+      <div class="phone">
+        <div class="bar">← Report a problem</div>
+        <div class="box">Problem type<br>○ Path blocked ○ No shade ○ Water point empty</div>
+        <div class="box">Where? (tap on the map)<div class="map" style="height:120px;flex:none;margin-top:6px">mini map</div></div>
+        <div class="box">Comment (optional)<div class="line"></div><div class="line s"></div></div>
+        <div class="btn">Send report</div>
+        <p style="font-size:.65rem;color:#777;margin:0">Staff review every report before the map changes.</p>
+      </div>
+      <p class="desc">Reports go to a review list; the team updates the data after checking.</p>
+    </div>
+  </div>
+</body>
+</html>

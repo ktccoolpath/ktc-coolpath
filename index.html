@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KTC CoolPath – Campus Map</title>
+  <meta name="description" content="KTC CoolPath – Smart Heat-Safe Campus Walking Guide (Group 104)">
+  <meta name="theme-color" content="#1f2a6b">
+
+  <!-- Leaflet.js (map library) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">❄</span>
+      <div>
+        <h1>KTC CoolPath</h1>
+        <p class="subtitle">Heat-safe campus walking guide</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Search a room or place -->
+    <div class="search-row">
+      <input id="search" type="search" placeholder="Find a room or place (e.g. 264, Clinic, Gate 3)" autocomplete="off">
+      <ul id="search-results" class="search-results" hidden></ul>
+    </div>
+
+    <!-- Floor switcher -->
+    <nav class="tabs" id="floor-tabs" aria-label="Choose floor">
+      <button data-floor="0" class="active">Ground</button>
+      <button data-floor="1">1st</button>
+      <button data-floor="2">2nd</button>
+      <button data-floor="outdoor">Outside</button>
+    </nav>
+
+    <!-- Layer filters -->
+    <div class="filters" id="filters">
+      <label><input type="checkbox" data-type="gate" checked> <span class="dot gate"></span>Gates</label>
+      <label><input type="checkbox" data-type="water" checked> <span class="dot water"></span>Water</label>
+      <label><input type="checkbox" data-type="facility" checked> <span class="dot facility"></span>Places</label>
+      <label><input type="checkbox" data-type="room" checked> <span class="dot room"></span>Rooms</label>
+      <label><input type="checkbox" data-type="elevator" checked> <span class="dot elevator"></span>Lifts/Stairs</label>
+      <label><input type="checkbox" data-type="restroom" checked> <span class="dot restroom"></span>Restrooms</label>
+    </div>
+
+    <!-- The map -->
+    <div id="map" class="map"></div>
+    <div id="outdoor-map" class="map" hidden></div>
+
+    <p class="legend-note">
+      <span class="badge verified">✔ confirmed</span> = from the official KTC map or checked on our walk-through &nbsp;
+      <span class="badge unverified">assumed</span> = placed from the floor map, not visited yet
+    </p>
+
+    <!-- Developer panel: open the page with ?dev=1 to use it -->
+    <section id="dev-panel" class="dev-panel" hidden>
+      <h2>Coordinate picker (dev mode)</h2>
+      <p>Tap anywhere on the floor map. Copy the row into the campus data sheet.</p>
+      <code id="dev-output">Tap the map…</code>
+      <button id="dev-copy" type="button">Copy row</button>
+    </section>
+
+    <p class="disclaimer">CoolPath is a planning guide, not a safety guarantee. In extreme heat, stay indoors and drink water.</p>
+  </main>
+
+  <footer class="footer">KTC CoolPath · Group 104 · Kuwait Technical College</footer>
+
+  <script src="js/config.js"></script>
+  <script src="data/campus.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

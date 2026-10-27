@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoolPath – Survey Analyzer</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    .card { background:#fff; border:1px solid var(--border); border-radius:14px; padding:14px; margin-bottom:14px; }
+    .card h3 { margin:0 0 4px; font-size:1rem; }
+    .meta { color:var(--muted); font-size:.85rem; margin-bottom:8px; }
+    .answers { max-height:240px; overflow:auto; margin:0; padding-left:18px; font-size:.9rem; }
+    .answers li { margin-bottom:4px; }
+    .drop { border:2px dashed var(--border); border-radius:14px; padding:24px; text-align:center; background:#fff; }
+    .stat { font-size:2rem; font-weight:700; color:var(--navy); }
+    button.primary { border:0; background:var(--navy); color:#fff; padding:10px 16px; border-radius:10px; font-weight:600; cursor:pointer; }
+    canvas { max-height: 280px; }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="logo">📊</span>
+    <div><h1>Survey analyzer</h1><p class="subtitle">Turns the Google Forms CSV into charts for the report</p></div></div>
+  </header>
+  <main>
+    <div class="card">
+      <p><strong>How to use:</strong> Google Forms → <em>Responses</em> → green Sheets icon → in the sheet:
+        <em>File → Download → Comma-separated values (.csv)</em>. Then choose that file below.
+        Nothing is uploaded anywhere – the file is read only inside your browser.</p>
+      <div class="drop">
+        <input type="file" id="file" accept=".csv,text/csv">
+      </div>
+    </div>
+
+    <div id="output"></div>
+  </main>
+
+  <script>
+    const MULTI_HINT = /choose all|select all|tick all|all that apply/i;
+    const SKIP_COLUMNS = /^(timestamp|email address|name|student id)$/i;
+    const MAX_CHOICES_FOR_CHART = 12;
+    const TEXT_HINT = /comment|suggest|why|explain|describe|anything else|other ideas/i;
+    let summaryLines = [];
+
+    document.getElementById("file").addEventListener("change", e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      Papa.parse(file, {
+        header: true,
+        skipEmptyLines: true,
+        complete: res => analyze(res.data, res.meta.fields, /simulated|sample/i.test(file.name))
+      });
+    });
+
+    function countValues(rows, col, multi) {
+      const counts = {};
+      rows.forEach(r => {
+        const raw = (r[col] || "").trim();
+        if (!raw) return;
+        // Google Forms joins checkbox answers with ", "
+        const parts = multi ? raw.split(/,\s(?=[A-Z0-9])/) : [raw];
+        parts.forEach(p => { p = p.trim(); if (p) counts[p] = (counts[p] || 0) + 1; });
+      });
+      return Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    }
+
+    function analyze(rows, fields, simulated) {
+      const out = document.getElementById("output");
+      out.innerHTML = "";
+      summaryLines = [`# Student survey results – KTC CoolPath (Group 104)`, ``];
+      if (simulated) {
+        summaryLines.push(`> SIMULATED DATA – sample answers used to test the analysis. Not real student responses.`, ``);
+        out.insertAdjacentHTML("beforeend",
+          `<div class="alert"><strong>Simulated data.</strong> This file contains sample answers made to test the survey analysis – they are not real student responses. Replace it with the real Google Forms export when the survey is run.</div>`);
+      }
+      summaryLines.push(`Total responses: ${rows.length}`, ``);
+
+      out.insertAdjacentHTML("beforeend",
+        `<div class="card"><div class="stat">${rows.length}</div><div class="meta">responses analysed</div>
+         <button class="primary" id="dl">Download summary (.md) for the report</button></div>`);
+      document.getElementById("dl").addEventListener("click", downloadSummary);
+
+      fields.forEach((col, i) => {
+        if (SKIP_COLUMNS.test(col.trim())) return;
+        const multi = MULTI_HINT.test(col);
+        const counts = countValues(rows, col, multi);
+        const answered = rows.filter(r => (r[col] || "").trim()).length;
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `<h3>${escapeHtml(col)}</h3><div class="meta">${answered} answered${multi ? " · multiple answers allowed" : ""}</div>`;
+        out.appendChild(card);
+
+        summaryLines.push(`## ${col}`, `(${answered} answered)`, ``);
+
+        const looksLikeText = TEXT_HINT.test(col) || (answered >= 5 && counts.length > answered * 0.6);
+        if (counts.length && counts.length <= MAX_CHOICES_FOR_CHART && !looksLikeText) {
+          // Chart for multiple-choice / scale questions
+          const canvas = document.createElement("canvas");
+          card.appendChild(canvas);
+          new Chart(canvas, {
+            type: "bar",
+            data: {
+              labels: counts.map(c => c[0].length > 40 ? c[0].slice(0, 38) + "…" : c[0]),
+              datasets: [{ data: counts.map(c => c[1]), backgroundColor: "#2c3a8c" }]
+            },
+            options: {
+              indexAxis: "y",
+              plugins: { legend: { display: false } },
+              scales: { x: { beginAtZero: true, ticks: { precision: 0 } } }
+            }
+          });
+          counts.forEach(([label, n]) => {
+            const pct = answered ? Math.round(n * 100 / answered) : 0;
+            summaryLines.push(`- ${label}: ${n} (${pct}%)`);
+          });
+        } else {
+          // Free-text question: list the answers
+          const ul = document.createElement("ul");
+          ul.className = "answers";
+          rows.forEach(r => {
+            const v = (r[col] || "").trim();
+            if (v) { const li = document.createElement("li"); li.textContent = v; ul.appendChild(li); summaryLines.push(`- "${v}"`); }
+          });
+          card.appendChild(ul);
+        }
+        summaryLines.push(``);
+      });
+    }
+
+    function downloadSummary() {
+      const blob = new Blob([summaryLines.join("\n")], { type: "text/markdown" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "survey-results-summary.md";
+      a.click();
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+    }
+  </script>
+</body>
+</html>
